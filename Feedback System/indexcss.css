@@ -1,0 +1,122 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: black;
+   opacity: 0.8; 
+}
+.bg {
+  animation:slide 3s ease-in-out infinite alternate;
+  background-image: linear-gradient(-60deg, #030303 50%, rgb(31, 33, 33) 50%);
+  bottom:0;
+  left:-50%;
+  opacity:.5;
+  position:fixed;
+  right:-50%;
+  top:0;
+  z-index:-1;
+}
+div
+{
+  word-wrap: break-word;
+}
+.bg2 {
+  animation-direction:alternate-reverse;
+  animation-duration:4s;
+}
+
+.bg3 {
+  animation-duration:3s;
+}
+
+
+@keyframes slide {
+  0% {
+    transform:translateX(-25%);
+  }
+  100% {
+    transform:translateX(25%);
+  }
+}  
+p {
+  color: #fff;
+  margin-top: 70px;
+}
+label {
+  color: #fff;
+  margin-top: 10px;
+}
+
+
+main {
+  width: 80%;
+  margin: 0 auto;
+  background:    rgba(15, 15, 15, 0.5);
+  padding: 20px;
+  border: 2px solid #343434;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+.product-info {
+  display: flex;
+  width: 40%;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5); /* Use an RGBA color with an alpha value for transparency */
+  position: relative;
+  padding-bottom: 40px;
+   border: 2px solid #c7c7c7;
+   border-radius: 20px;
+   transition: border-width 0.5s;
+   padding: 40px;
+   margin: 10px;
+   margin-left: 400px;
+
+}
+.product-info:hover {
+          border-width: 10px;
+      }
+
+        /* Form input field styles */
+        input[type="text"],
+        input[type="email"],
+        input[type="number"],
+        textarea {
+            background-color: #333; /* Dark gray background */
+            border: 1px solid #555; /* Light gray border */
+            color: #fff;
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 5px;
+        }
+
+        /* Style radio buttons and labels */
+        input[type="radio"] {
+            margin-right: 5px;
+        }
+        .section-heading {
+          font-size: 24px;
+          color: #ff6ec4;
+          margin-top: 20px;
+      }
+      .neon-button {
+          display: inline-block;
+          background: linear-gradient(to right, #ff6ec4, #7873f5);
+          color: #fff;
+          padding: 10px 20px;
+          font-size: 18px;
+          border: none;
+          border-radius: 25px;
+          text-align: center;
+          cursor: pointer;
+          box-shadow: 0 0 10px rgba(255, 110, 196, 0.5);
+          align-self: auto;
+          margin-top: 10px;
+          transition: background 0.3s, box-shadow 0.3s;
+      }
+
+      .neon-button:hover {
+          background: linear-gradient(to right, #7873f5, #ff6ec4);
+          box-shadow: 0 0 10px rgba(255, 110, 196, 0.8);
+      }

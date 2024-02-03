@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: black;
+     opacity: 0.8; 
+}
+.bg {
+    animation:slide 3s ease-in-out infinite alternate;
+    background-image: linear-gradient(-60deg, #030303 50%, rgb(31, 33, 33) 50%);
+    bottom:0;
+    left:-50%;
+    opacity:.5;
+    position:fixed;
+    right:-50%;
+    top:0;
+    z-index:-1;
+  }
+div
+{
+    word-wrap: break-word;
+}
+  .bg2 {
+    animation-direction:alternate-reverse;
+    animation-duration:4s;
+  }
+  
+  .bg3 {
+    animation-duration:3s;
+  }
+  
+  
+  @keyframes slide {
+    0% {
+      transform:translateX(-25%);
+    }
+    100% {
+      transform:translateX(25%);
+    }
+  }  
+p {
+    color: #fff;
+    margin-top: 70px;
+}
+label {
+    color: #fff;
+    margin-top: 10px;
+}
+
+
+main {
+    width: 80%;
+    margin: 0 auto;
+    background:    rgba(15, 15, 15, 0.5);
+    padding: 20px;
+    border: 2px solid #343434;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+.product-info {
+    display: flex;
+    width: 40%;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5); /* Use an RGBA color with an alpha value for transparency */
+    position: relative;
+    padding-bottom: 40px;
+     border: 2px solid #c7c7c7;
+     border-radius: 20px;
+     transition: border-width 0.5s;
+     padding: 40px;
+     margin: 10px;
+     margin-left: 400px;
+
+}
+  .product-info:hover {
+            border-width: 10px;
+        }
+  
+          /* Form input field styles */
+          input[type="text"],
+          input[type="email"],
+          input[type="number"],
+          textarea {
+              background-color: #333; /* Dark gray background */
+              border: 1px solid #555; /* Light gray border */
+              color: #fff;
+              padding: 10px;
+              margin: 5px 0;
+              border-radius: 5px;
+          }
+  
+          /* Style radio buttons and labels */
+          input[type="radio"] {
+              margin-right: 5px;
+          }
+          .section-heading {
+            font-size: 24px;
+            color: #ff6ec4;
+            margin-top: 20px;
+        }
+        .neon-button {
+            display: inline-block;
+            background: linear-gradient(to right, #ff6ec4, #7873f5);
+            color: #fff;
+            padding: 10px 20px;
+            font-size: 18px;
+            border: none;
+            border-radius: 25px;
+            text-align: center;
+            cursor: pointer;
+            box-shadow: 0 0 10px rgba(255, 110, 196, 0.5);
+            align-self: auto;
+            margin-top: 10px;
+            transition: background 0.3s, box-shadow 0.3s;
+        }
+
+        .neon-button:hover {
+            background: linear-gradient(to right, #7873f5, #ff6ec4);
+            box-shadow: 0 0 10px rgba(255, 110, 196, 0.8);
+        }
+    </style>
+    <title>Simple Form</title>
+</head>
+<body>  
+    <div class="bg"></div>
+    <div class="bg bg2"></div>
+    <div class="bg bg3"></div>
+    
+    <section class="product-info">
+
+       
+
+
+<form action="/submit" method="post">
+
+    <h1 style="color:white;text-align: center;">Feedback</h1>
+    
+    <input type="text" id="name" name="name" required placeholder="Name">
+    
+    <br>
+    <br>
+    
+    
+    <input type="email" id="email" name="email" placeholder="Email Address">
+    
+    <br>
+    <br>
+    
+   
+    <input type="number" id="age" name="age" required placeholder="Age">
+
+    <br>
+    <br>
+
+    <p> How was your experience on our Website ?</p>
+    <label><input type="radio" name="First" value="Worst">Worst</label>
+    <label><input type="radio" name="First" value="Good">Good</label>
+    <label><input type="radio" name="First" value="Best">Best</label>
+    <br>
+
+    <p>Was our website user-friendly?</p>
+    <label><input type="radio" name="second" value="Worst">Worst</label>
+    <label><input type="radio" name="second" value="Good">Good</label>
+    <label><input type="radio" name="second" value="Best">Best</label>
+
+    <p>What was your overall experience ?</p>
+    <label><input type="radio" name="third" value="Worst">Worst</label>
+    <label><input type="radio" name="third" value="Good">Good</label>
+    <label><input type="radio" name="third" value="Best">Best</label>
+
+    <p>Did not find the product you want?(Please drop it's name,we are here for you)</p>
+    <textarea name="product" rows="4" cols="50" required></textarea>
+
+    <p>Text Area 2: Any additional comments or suggestions?</p>
+    <textarea name="comments" rows="4" cols="50" required></textarea>
+    <br><br>
+    <div class="neon-button">
+    <input type="submit" value="Submit">
+    </div>
+</form>
+      
+    </section>
+   
+</body>
+</html>
+
